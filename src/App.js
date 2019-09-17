@@ -1,10 +1,12 @@
 import React from 'react';
+import Task1 from './Task1/Task1'
 
 
 function App() {
   return (
     <div>
-      react app
+      <Task1 />
+
     </div>
   );
 }
