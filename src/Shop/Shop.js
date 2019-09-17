@@ -32,6 +32,8 @@ class Shop extends Component {
 
         return (<>
 
+            <h1>Twój koszyk:</h1>
+
             <button disabled={this.state.ammount === 0 ? true : false} id="minus" onClick={this.handleButton}>-</button>
             {this.state.ammount}/{this.state.maxAmmount}
             <button disabled={this.state.ammount === this.state.maxAmmount ? true : false} id="plus" onClick={this.handleButton}>+</button>
