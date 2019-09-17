@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Form from './Form'
 
 class Shop extends Component {
     constructor(props) {
@@ -34,13 +35,17 @@ class Shop extends Component {
 
             <h1>Twój koszyk:</h1>
 
-            <button disabled={this.state.ammount === 0 ? true : false} id="minus" onClick={this.handleButton}>-</button>
+            <Form ammountState={this.state} handleButton={this.handleButton} />
+
+            {/* <button disabled={this.state.ammount === 0 ? true : false} id="minus" onClick={this.handleButton}>-</button>
             {this.state.ammount}/{this.state.maxAmmount}
             <button disabled={this.state.ammount === this.state.maxAmmount ? true : false} id="plus" onClick={this.handleButton}>+</button>
             <br />
             <button id="buy" disabled={this.state.maxAmmount === 0 ? true : false} onClick={this.handleButton}>Kup</button><br />
             Zakupiono: {this.state.totalSoldAmmount} <br />
-            Ilość dostępnych sztuk: {this.state.maxAmmount}
+            Ilość dostępnych sztuk: {this.state.maxAmmount} */}
+
+
 
         </>
         );
