@@ -1,12 +1,13 @@
 import React from 'react';
-import Task1 from './Task1/Task1'
+import Movie from './Movie/Movie'
+import Shop from './Shop/Shop'
 
 
 function App() {
   return (
     <div>
-      <Task1 />
-
+      <Movie />
+      <Shop />
     </div>
   );
 }
