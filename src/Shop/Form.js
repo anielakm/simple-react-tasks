@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../components/Button'
 
 const Form = (props) => {
 
@@ -6,10 +7,10 @@ const Form = (props) => {
 
     return (<>
 
-        <button disabled={ammountState.ammount === 0 ? true : false} id="minus" onClick={handleButton}>-</button>
+        <Button round disabled={ammountState.ammount === 0 ? true : false} id="minus" onClick={handleButton}>-</Button>
         {ammountState.ammount}/{ammountState.maxAmmount}
-        <button disabled={ammountState.ammount === ammountState.maxAmmount ? true : false} id="plus" onClick={handleButton}>+</button><br />
-        <button id="buy" disabled={ammountState.maxAmmount === 0 ? true : false} onClick={handleButton}>Kup</button><br />
+        <Button round disabled={ammountState.ammount === ammountState.maxAmmount ? true : false} id="plus" onClick={handleButton}>+</Button><br />
+        <Button id="buy" disabled={ammountState.maxAmmount === 0 ? true : false} onClick={handleButton}>Kup</Button><br />
         Zakupiono: {ammountState.totalSoldAmmount} <br />
         Ilość dostępnych sztuk: {ammountState.maxAmmount}
 

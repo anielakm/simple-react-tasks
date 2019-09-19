@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Form from './Form'
+import Container from '../components/Container'
+import Text from '../components/Text'
+
 
 class Movie extends Component {
     constructor(props) {
@@ -26,10 +29,10 @@ class Movie extends Component {
     render() {
 
 
-        return (<>
+        return (<Container>
             <Form handleForm={this.handleForm} handleCheckbox={this.handleCheckbox} checked={this.state.isChecked} />
-            {this.state.message}
-        </>);
+            <Text >{this.state.message}</Text>
+        </Container>);
     }
 }
 

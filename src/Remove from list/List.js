@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Person from './Person'
+import Container from '../components/Container'
+import Ul from '../components/Ul'
+import Text from '../components/Text'
 
 class List extends Component {
     constructor(props) {
@@ -34,22 +37,20 @@ class List extends Component {
 
     handleActive = (id) => {
 
-
         let people = [...this.state.people];
         people.filter(item => item.id == id)[0].isActive = false;
-        console.log(people);
         this.setState({ people })
 
     }
     render() {
 
-        return (<>
-            <ul>
-
+        return (<Container>
+            <Ul>
+                {this.state.people.filter(item => item.isActive).length === 0 && <Text>Lista jest pusta</Text>}
                 {this.state.people.filter(item => item.isActive).map((item) => (<li key={item.id} ><Person data={item} handleActive={this.handleActive} /></li>))}
 
-            </ul>
-        </>);
+            </Ul>
+        </Container>);
     }
 }
 

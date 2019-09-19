@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Form from './Form'
+import Container from '../components/Container'
+import H1 from '../components/H1'
 
 class Shop extends Component {
     constructor(props) {
@@ -31,12 +33,12 @@ class Shop extends Component {
 
     render() {
 
-        return (<>
+        return (<Container>
 
-            <h1>Twój koszyk:</h1>
+            <H1>Twój koszyk:</H1>
             <Form ammountState={this.state} handleButton={this.handleButton} />
 
-        </>
+        </Container>
         );
 
     }

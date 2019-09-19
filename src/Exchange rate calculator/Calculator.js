@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import Currency from './Currency'
+import Container from '../components/Container'
+import H1 from '../components/H1'
+import Text from '../components/Text'
+import FormStyle from '../components/Form'
 
 class Calculator extends Component {
     constructor(props) {
@@ -67,20 +71,24 @@ class Calculator extends Component {
     }
 
     render() {
-        return (<>
-            <h1>Przelicznik walut</h1>
-            <label htmlFor="select">Wybierz produkt</label><select name="select" onChange={this.handleSelect}>
-                <option value="prąd">Prąd</option>
-                <option value="benzyna">Benzyna</option>
-                <option value="pomarańcze">Pomarańcze</option>
-            </select> <br />
-            <label htmlFor="">Wybierz ilość: </label>
-            <input type="text" value={this.state.ammount} onChange={this.handleChange} /> {this.state.goods.filter(item => item.name === this.state.selectedProduct)[0].unit} <br />
-            Wartość w złotych: {this.state.goods.filter(item => item.name === this.state.selectedProduct).map(item => item.price)} zł <br />
+        return (<Container>
+            <H1>Przelicznik walut</H1>
+
+            <>
+                <label htmlFor="select">Wybierz produkt</label><select name="select" onChange={this.handleSelect}>
+                    <option value="prąd">Prąd</option>
+                    <option value="benzyna">Benzyna</option>
+                    <option value="pomarańcze">Pomarańcze</option>
+                </select> <br />
+                <label htmlFor="">Wybierz ilość: </label>
+                <input type="text" value={this.state.ammount} onChange={this.handleChange} /> {this.state.goods.filter(item => item.name === this.state.selectedProduct)[0].unit} <br />
+            </>
+
+            <Text>Wartość w złotych: {this.state.goods.filter(item => item.name === this.state.selectedProduct).map(item => item.price)} zł </Text> <br />
 
             {this.state.currencies.map((item) => <Currency currency={item} handleCurrency={this.handleCurrency(`${item.name}`)} key={item.id} />)}
 
-        </>);
+        </Container>);
     }
 }
 

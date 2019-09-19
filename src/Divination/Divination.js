@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import Container from '../components/Container'
+import Button from '../components/Button'
+import Input from '../components/Input'
+import H1 from '../components/H1'
 
 class Divination extends Component {
     constructor(props) {
@@ -40,12 +44,12 @@ class Divination extends Component {
     }
 
     render() {
-        return (<>
-            <h1>Wylosuj lub dodaj wrózbe</h1>
-            <input type="text" id="divinationText" /> <button onClick={this.addDivination}>Dodaj wrózbę</button>
-            <button onClick={this.drawLots}>Losuj wrózbę</button> <br />
+        return (<Container>
+            <H1>Wylosuj lub dodaj wrózbę</H1>
+            <Input type="text" id="divinationText" placeholder="Treść wrózby ..." /> <br /><Button onClick={this.addDivination}>Dodaj wrózbę</Button>
+            <Button onClick={this.drawLots}>Losuj wrózbę</Button> <br />
             {this.state.divination}
-        </>);
+        </Container>);
     }
 }
 

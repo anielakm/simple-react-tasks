@@ -1,11 +1,13 @@
 import React from 'react';
+import H2 from '../components/H2'
+import Text from '../components/Text'
 
 const User = (props) => {
     const { data } = props;
 
     return (<>
-        <h2>Imię: {data.name}</h2>
-        <p>Wiek: {data.age}</p>
+        <H2>Imię: {data.name}</H2>
+        <Text>Wiek: {data.age}</Text>
     </>);
 }
 

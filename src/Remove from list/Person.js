@@ -1,11 +1,11 @@
 import React from 'react';
-
+import Button from '../components/Button'
 const Person = (props) => {
 
     const { data, handleActive } = props;
     return (<>
         <span>{data.name} {data.lastName}</span>
-        <button onClick={handleActive.bind(this, `${data.id}`)} >Usuń</button>
+        <Button small onClick={handleActive.bind(this, `${data.id}`)} >x</Button>
     </>);
 }
 

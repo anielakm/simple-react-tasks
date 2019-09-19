@@ -1,10 +1,11 @@
 import React from 'react';
+import Text from '../components/Text'
 
 const Currency = (props) => {
 
     const { currency, handleCurrency } = props;
 
-    return (<>{currency.text}: {handleCurrency} {currency.symbol} <br /></>);
+    return (<Text>{currency.text}: {handleCurrency} {currency.symbol} <br /></Text>);
 }
 
 export default Currency;

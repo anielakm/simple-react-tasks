@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import data from './data'
 import User from './User'
+import Container from '../components/Container'
+import Button from '../components/Button'
+import H1 from '../components/H1'
 
 class UsersList extends Component {
     constructor(props) {
@@ -28,14 +31,14 @@ class UsersList extends Component {
 
     render() {
 
-        return (<>
-            <h1>Lista uzytkownikow:</h1>
-            <button onClick={this.handleFilter.bind(this, 'all')}>Wszyscy uzytkownicy</button>
-            <button onClick={this.handleFilter.bind(this, 'female')}>Kobiety</button>
-            <button onClick={this.handleFilter.bind(this, 'male')}>Mezczyzni</button>
+        return (<Container>
+            <H1>Lista uzytkownikow:</H1>
+            <Button onClick={this.handleFilter.bind(this, 'all')}>Wszyscy uzytkownicy</Button>
+            <Button onClick={this.handleFilter.bind(this, 'female')}>Kobiety</Button>
+            <Button onClick={this.handleFilter.bind(this, 'male')}>Mezczyzni</Button>
 
             {this.usersList()}
-        </>);
+        </Container>);
     }
 }
 
