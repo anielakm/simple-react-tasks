@@ -37,7 +37,7 @@ const Nav = () => {
                 </ul>
             </Navigation>
 
-            <Route path="/movie" component={Movie} />
+            <Route path="/movie" exact component={Movie} />
             <Route path="/shop" component={Shop} />
             <Route path="/users" component={UsersList} />
             <Route path="/exrate" component={Calculator} />
