@@ -7,6 +7,7 @@ import Divination from '../Divination/Divination'
 import List from '../Remove from list/List'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Navigation from '../components/Nav'
+import Hello from '../Hello'
 
 const Nav = () => {
     return (<>
@@ -37,7 +38,8 @@ const Nav = () => {
                 </ul>
             </Navigation>
 
-            <Route path="/movie" exact component={Movie} />
+            <Route path="/" exact component={Hello} />
+            <Route path="/movie" component={Movie} />
             <Route path="/shop" component={Shop} />
             <Route path="/users" component={UsersList} />
             <Route path="/exrate" component={Calculator} />
