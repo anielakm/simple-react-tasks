@@ -2,20 +2,20 @@
 
 Simple React App with tasks:
 
-#Movie
+### Movie
 Displaying message which content depends on checkbox value.
 
-#Shop
+### Shop
 Minimalistic basket which handle state of product ammount in shop and baset.
 
-#Users
+### Users
 Filtering list of users.
 
-#Exchange Rate Calculator
+### Exchange Rate Calculator
 Exchange Rate Calculator contains 4 different currencies and 3 different types of products (with different units).
 
-#Divination Draw
+### Divination Draw
 Dawing or adding a divination.
 
-#List
+### List
 Lists which elements can be removed.
